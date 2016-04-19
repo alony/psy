@@ -2,6 +2,10 @@ use Rack::Static,
   :urls => ["/images", "/js", "/css"],
   :root => "public"
 
+use Rack::Auth::Basic, "Restricted Area" do |username, password|
+  [username, password] == ['master', "abrakadabra"]
+end
+
 run lambda { |env|
   [
     200,
