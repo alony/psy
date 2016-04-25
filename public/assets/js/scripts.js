@@ -1,4 +1,13 @@
 /*-----------------------------------------------------------------------------------*/
+/*  STYLE SELECT #TODO remove me
+/*-----------------------------------------------------------------------------------*/
+jQuery(document).ready(function() {
+  jQuery('div#style-select select').on("change", function() {
+    window.location.href = $(this).val();
+  });
+});
+
+/*-----------------------------------------------------------------------------------*/
 /*	VIDEO
 /*-----------------------------------------------------------------------------------*/
 jQuery(document).ready(function() {
@@ -40,16 +49,16 @@ $(document).ready(function() {
         });
     }
     });
-    
+
 /*-----------------------------------------------------------------------------------*/
 /*	SOCIAL HOVER
 /*-----------------------------------------------------------------------------------*/
 
 $(function() {
-$('.social img').css("opacity","1.0");	
-$('.social img').hover(function () {										  
-$(this).stop().animate({ opacity: 0.75 }, "fast"); },	
-function () {			
+$('.social img').css("opacity","1.0");
+$('.social img').hover(function () {
+$(this).stop().animate({ opacity: 0.75 }, "fast"); },
+function () {
 $(this).stop().animate({ opacity: 1.0 }, "fast");
 });
 });
@@ -64,8 +73,8 @@ $("a.button, .forms fieldset .btn-submit, #submit").css("opacity","1.0");
 $("a.button, .forms fieldset .btn-submit, #submit").hover(function () {
 $(this).stop().animate({ opacity: 0.85 }, "fast");  },
 function () {
-$(this).stop().animate({ opacity: 1.0 }, "fast");  
-}); 
+$(this).stop().animate({ opacity: 1.0 }, "fast");
+});
 });
 
 /*-----------------------------------------------------------------------------------*/
@@ -75,17 +84,17 @@ $(this).stop().animate({ opacity: 1.0 }, "fast");
 $(document).ready(function() {
 	$('input[title]').each(function() {
 		if($(this).val() === '') {
-			$(this).val($(this).attr('title'));	
+			$(this).val($(this).attr('title'));
 		}
-		
+
 		$(this).focus(function() {
 			if($(this).val() == $(this).attr('title')) {
-				$(this).val('').addClass('focused');	
+				$(this).val('').addClass('focused');
 			}
 		});
 		$(this).blur(function() {
 			if($(this).val() === '') {
-				$(this).val($(this).attr('title')).removeClass('focused');	
+				$(this).val($(this).attr('title')).removeClass('focused');
 			}
 		});
 	});
@@ -113,7 +122,7 @@ $(document).ready(function() {
 	$(".tab_content").hide(); //Hide all content
 	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
 	$(".tab_content:first").show(); //Show first tab content
-	
+
 	//On Click Event
 	$("ul.tabs li").click(function() {
 		$("ul.tabs li").removeClass("active"); //Remove any "active" class
@@ -131,9 +140,9 @@ $(document).ready(function() {
 /*-----------------------------------------------------------------------------------*/
 
 getTwitters('twitter', {
-        id: 'elemisdesign', 
-        count: 2, 
-        enableLinks: true, 
+        id: 'elemisdesign',
+        count: 2,
+        enableLinks: true,
         ignoreReplies: false,
         template: '<span class="twitterPrefix"><span class="twitterStatus">%text%</span><br /><em class="twitterTime"><a href="http://twitter.com/%user_screen_name%/statuses/%id%">%time%</a></em>',
         newwindow: true

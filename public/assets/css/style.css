@@ -1839,6 +1839,12 @@ ul.tabs:after {
 	padding: 20px 20px 0 20px;
 }
 
+#style-select {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
 /* CHROME FIX */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 input#submit,
