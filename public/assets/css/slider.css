@@ -57,7 +57,6 @@ header h1 {
 .cd-image-container {
   position: relative;
   width: 100%;
-  max-width: 768px;
   margin: 0em auto;
 }
 .cd-image-container img {
@@ -124,7 +123,7 @@ header h1 {
   left: 0;
 }
 .is-visible .cd-resize-img {
-  width: 50%;
+  width: 75%;
   /* bounce in animation of the modified image */
   -webkit-animation: cd-bounce-in 0.7s;
   -moz-animation: cd-bounce-in 0.7s;
@@ -136,10 +135,10 @@ header h1 {
     width: 0;
   }
   60% {
-    width: 55%;
+    width: 92%;
   }
   100% {
-    width: 50%;
+    width: 75%;
   }
 }
 @-moz-keyframes cd-bounce-in {
@@ -147,10 +146,10 @@ header h1 {
     width: 0;
   }
   60% {
-    width: 55%;
+    width: 92%;
   }
   100% {
-    width: 50%;
+    width: 75%;
   }
 }
 @keyframes cd-bounce-in {
@@ -158,10 +157,10 @@ header h1 {
     width: 0;
   }
   60% {
-    width: 55%;
+    width: 92%;
   }
   100% {
-    width: 50%;
+    width: 75%;
   }
 }
 .cd-handle {
@@ -169,8 +168,8 @@ header h1 {
   height: 44px;
   width: 44px;
   /* center the element */
-  left: 50%;
-  top: 50%;
+  left: 75%;
+  top: 80%;
   margin-left: -22px;
   margin-top: -22px;
   border-radius: 50%;

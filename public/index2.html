@@ -32,9 +32,50 @@
     font-family: 'Constantia';
   }
 
-  body, input, textarea {
+  .entry-title {
+    font-size: 22px;
+  }
+
+  #access .menu ul li {
+    padding: 8px 35px 0 35px;
+  }
+
+  body, #main, input, textarea {
     background: #2f7791 repeat fixed;
   }
+
+  #main {
+    padding: 0;
+  }
+
+  #wrapper {
+    border: none;
+  }
+
+  #page {
+    box-shadow: none;
+    width: 100%;
+    margin: inherit 0;
+    padding: inherit 0;
+  }
+
+  .intro {
+    color: #c0c0c0;
+  }
+
+  #access .menu ul {
+    background-color: #3C5364;
+  }
+  #access .menu ul li a{
+    font-size: 18px;
+  }
+  #access .menu ul li:hover {
+    background-color: #6B94B4;
+  }
+  #access .menu ul li:hover a {
+    color: #333;
+  }
+
 </style>
 
 </head>
@@ -71,27 +112,12 @@
     <div class="post hentry format-image">
       <div class="intro left">Der erste Sritt aus der krise...</div>
 
-      <iframe class="image-slider" src="slider" frameborder="0" scrolling="no" align="middle" width="768" height="480"></iframe>
+      <iframe class="image-slider" src="slider" frameborder="0" scrolling="no" align="middle" width="850" height="540"></iframe>
 
       <div class="intro right">...werden Sie aktiv</div>
     <div>
   </article>
 </div>
-
-<header id="branding" role="banner">
-  <nav id="access" class="access" role="navigation">
-    <div id="menu" class="menu">
-    	<ul id="tiny">
-				<li><a href="about.html">Über mich</a>
-				<li><a href="therapyforms.html">Therapieformen</a></li>
-				<li><a href="contact.html">Kontakt</a></li>
-				<li><a href="about.html">Honorar</a></li>
-				<li><a href="links.html">Links</a></li>
-			</ul>
-		</div>
-  </nav>
-  <!-- #access -->
-</header>
 <!-- #branding -->
 
   </div><!-- #content -->
@@ -99,15 +125,29 @@
 
 
 </div><!-- #main -->
-
-	<footer id="colophon" role="contentinfo">
-		<div id="site-generator">
-      2016 Heilpraktiker Praxis für Coaching und Psychotherapie ©
-		</div>
-
-	</footer><!-- #colophon -->
 	</div><!-- #wrapper -->
 </div><!-- #page -->
+<header id="branding" role="banner">
+  <nav id="access" class="access" role="navigation">
+    <div id="menu" class="menu">
+      <ul id="tiny">
+        <li><a href="about.html">Über mich</a>
+        <li><a href="aim.html">Ziel</a></li>
+        <li><a href="contact.html">Kontakt / Termine</a></li>
+        <li><a href="praxis.html">Praxis / Anfahrt</a></li>
+        <li><a href="honorar.html">Honorar</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- #access -->
+</header>
+
+<footer id="colophon" role="contentinfo">
+    <div id="site-generator">
+      2016 Heilpraktiker Praxis für Coaching und Psychotherapie ©
+    </div>
+
+  </footer><!-- #colophon -->
 
 <script type="text/javascript" src="assets/js/scripts.js"></script>
 </body>

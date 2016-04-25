@@ -84,7 +84,7 @@ input, textarea {
 /*-----------------------------------------------------------------------------------*/
 
 body {
-	padding: 0 40px;
+	padding: 0;
 }
 
 body, input, textarea {
@@ -450,7 +450,7 @@ object {
 #page {
 	-webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
 	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.4);
-	max-width: 1040px;
+	max-width: 1280px;
 	margin: 50px auto;
 }
 
@@ -662,10 +662,9 @@ input#s {
 	-o-transition:all 100ms ease-in;
 	-moz-transition:all 100ms ease-in;
 }
-#access .menu ul li a:hover,
-#access .menu ul li.active a,
-#access .menu ul li a.selected {
-	color: #3c3c3c;
+#access .menu ul li:hover,
+#access .menu ul li.active {
+	background-color: #3c3c3c;
 }
 #access .menu ul li ul {
 	position: absolute;
@@ -729,9 +728,9 @@ input#s {
 .hentry {
 	position: relative;
 	padding-bottom: 20px;
-	margin: auto auto 40px auto;
+	margin: 30px auto 0 auto;
 	background: transparent repeat-x center bottom;
-	width: 798px;
+  width: 850px;
 }
 
 .hentry footer.entry-meta {
@@ -753,7 +752,7 @@ input#s {
 .entry-title {
 	color: #FABF8F;
 	margin: 0 0 5px 0;
-	font-size: 26px;
+	font-size: 24px;
 }
 .entry-title,
 .entry-title a {
