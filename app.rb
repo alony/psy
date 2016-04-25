@@ -3,6 +3,7 @@ class App
     @routes = {
       "/" => "public/index.html",
       "/1" => "public/index1.html",
+      "/2" => "public/index2.html",
       "/slider" => "public/slider.html"
     }
   end

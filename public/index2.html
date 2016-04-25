@@ -7,7 +7,8 @@
 <link rel="shortcut icon" href="assets/images/favicon.png"/>
 <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
 <link rel="stylesheet" type="text/css" href="assets/css/view.css" media="all" />
-<link href='https://fonts.googleapis.com/css?family=Raleway:500&subset=latin-ext' rel='stylesheet' type='text/css'>
+<!-- <link href='https://fonts.googleapis.com/css?family=Raleway:500&subset=latin-ext' rel='stylesheet' type='text/css'> -->
+<link rel="stylesheet" type="text/css" href="assets/type/constantia.css" media="all" />
 <link rel="stylesheet" type="text/css" href="assets/type/merriweather.css" media="all" />
 <link rel="stylesheet" type="text/css" href="assets/css/queries.css" media="all" />
 <!--[if IE 8]>
@@ -25,6 +26,17 @@
 <script type="text/javascript" src="assets/js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="assets/js/selectnav.js"></script>
 <script type="text/javascript" src="assets/js/twitter.min.js"></script>
+
+<style>
+  h1, h2, h3, h4, h5, h6, #access .menu, ul.tabs li a {
+    font-family: 'Constantia';
+  }
+
+  body, input, textarea {
+    background: #2f7791 repeat fixed;
+  }
+</style>
+
 </head>
 
 <body>
@@ -38,9 +50,9 @@
 
   <div id="style-select">
     <select>
-      <option value="/" selected>#0</option>
+      <option value="/">#0</option>
       <option value="/1">#1</option>
-      <option value="/2">#2</option>
+      <option value="/2" selected>#2</option>
     </select>
   </div>
 
@@ -70,11 +82,11 @@
   <nav id="access" class="access" role="navigation">
     <div id="menu" class="menu">
     	<ul id="tiny">
-				<li><a href="/about">Über mich</a>
-				<li><a href="/therapyforms">Therapieformen</a></li>
-				<li><a href="/contact">Kontakt</a></li>
-				<li><a href="/about">Honorar</a></li>
-				<li><a href="/links">Links</a></li>
+				<li><a href="about.html">Über mich</a>
+				<li><a href="therapyforms.html">Therapieformen</a></li>
+				<li><a href="contact.html">Kontakt</a></li>
+				<li><a href="about.html">Honorar</a></li>
+				<li><a href="links.html">Links</a></li>
 			</ul>
 		</div>
   </nav>
