@@ -183,6 +183,9 @@ header h1 {
   -o-transform: translate3d(0, 0, 0) scale(0);
   transform: translate3d(0, 0, 0) scale(0);
 }
+.cd-handle:hover {
+  background-color: #dc717d;
+}
 .cd-handle.draggable {
   /* change background color when element is active */
   background-color: #445b7c;
