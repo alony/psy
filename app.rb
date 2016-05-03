@@ -4,7 +4,13 @@ class App
       "/" => "public/index.html",
       "/1" => "public/index1.html",
       "/2" => "public/index2.html",
-      "/slider" => "public/slider.html"
+      "/slider" => "public/slider.html",
+      "/anfahrt" => "public/pages/anfahrt.html",
+      "/honorar" => "public/pages/honorar.html",
+      "/kontakt" => "public/pages/kontakt.html",
+      "/methoden" => "public/pages/methoden.html",
+      "/ueber-mich" => "public/pages/about.html",
+      "/ziel" => "public/pages/ziel.html"
     }
   end
 
