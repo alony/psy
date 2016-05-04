@@ -36,17 +36,12 @@
     font-size: 22px;
   }
 
-  #access .menu ul li {
-    padding: 8px 35px 0 35px;
-  }
-
-  body, #main, input, textarea {
+  body, #main, input, textarea, footer {
     background: #2f7791 repeat fixed;
   }
 
   #main {
     padding: 0;
-    height: 100vh;
   }
 
   #wrapper {
@@ -56,6 +51,7 @@
   #page {
     box-shadow: none;
     width: 100%;
+    max-width: none;
     margin: inherit 0;
     padding: inherit 0;
   }
@@ -84,6 +80,13 @@
 
 <body>
 <div id="page" class="hfeed">
+
+<article class="post hentry format-image page-header">
+<header class="entry-header">
+  <h2 class="entry-title">Über mich</h2>
+</header>
+</article>
+
 <div id="wrapper">
 
 <div id="main">
@@ -92,34 +95,57 @@
   <div id="content" role="main">
 
   <!-- begin article -->
-  <article class="post hentry format-image">
-    <header class="entry-header">
-      <h2 class="entry-title">Über mich</h2>
-    </header>
-  </div>
-  </article>
+
 
   <article class="post hentry format-image">
     <div class="post hentry format-image">
+      <p class="intro left">Zu meiner Person:</p>
 
-    <div>
+      <p>
+        Mein Name ist Lars Bollmann – Jahrgang 1974.<br>
+        Ich bin verheiratet und habe 2 Kinder.
+      </p>
+
+      <p>
+        Meine ursprünglichen Wurzeln liegen in der freien Wirtschaft (Transport und Logistik).<br>
+        Innerhalb dieser Branche brachten mich die internationalen Kontakte  und die erhebliche Stressbelastung schnell in Kontakt mit Themen wie Blockaden / Probleme sozialer und persönlicher Interaktion, als auch Burn out (bzw. Depressivität).
+      </p>
+
+      <p>
+        Aufgrund dieser Erfahrungen aus dem realen Leben, wuchs mein Bedürfnis heilend und helfend Tätig zu werden.<br>
+        Vor meiner Ausbildung absolvierte ich bereits 4 Jahre ein Studium der Psychologie in Oldenburg.<br>
+        Leider waren die Inhalte zu sehr forschungs- und zu wenig methodenorientiert.<br>
+        Somit fehlten mir die Komponenten, die es mir heute ermöglichen, nachhaltig harmonisierend mit meinen Mandanten zu arbeiten.
+      </p>
+
+      <p>
+        Es fiel der Entschluß, nicht den Weg des Diplom Psychologen zu gehen, sondern meine Zeit ohne Umwege auf Fortbildungsmaßnahmen zu konzentrieren, welche mir Techniken und Möglichkeiten an die Hand gaben, mit denen ich heute erfolgreich arbeite.
+      </p>
+
+      <p>
+        Mein Ziel ist es, Ihnen in einer angenehmen Atmosphäre, die Möglichkeit zu geben, sich authentisch mitzuteilen und gemeinsam einen Weg zurück zu Ihrer persönlichen seelischen Balance und Ausgeglichenheit zu finden.
+      </p>
+
+      <p>Ich freu mich auf unser erstes Gespräch</p>
+
+      <p>Ihr Lars Bollmann</p></div>
+
+    </div>
   </article>
-</div>
-<!-- #branding -->
 
-  </div><!-- #content -->
-</div><!-- #primary -->
+  </div>
+   <!-- #content -->
+</div>
 
 
 </div><!-- #main -->
-  </div><!-- #wrapper -->
-</div><!-- #page -->
 <header id="branding" role="banner">
   <nav id="access" class="access" role="navigation">
     <div id="menu" class="menu">
       <ul id="tiny">
-        <li><a href="ueber-mich">Über mich</a>
-        <li><a href="methoden">Methoden</a>
+        <li class="home"><a href="/"></a></li>
+        <li class="active1"><a href="ueber-mich">Über mich</a></li>
+        <li><a href="methoden">Methoden</a></li>
         <li><a href="anfahrt">Anfahrt</a></li>
         <li><a href="kontakt">Kontakt / Termine</a></li>
         <li><a href="honorar">Honorar</a></li>
@@ -130,12 +156,16 @@
   <!-- #access -->
 </header>
 
-<footer id="colophon" role="contentinfo">
-    <div id="site-generator">
-      2016 Heilpraktiker Praxis für Coaching und Psychotherapie ©
-    </div>
+<footer>
+  <div id="site-generator">
+    2016 Heilpraktiker Praxis für Coaching und Psychotherapie ©
+  </div>
+</footer><!-- #colophon -->
 
-  </footer><!-- #colophon -->
+</div><!-- #wrapper -->
+
+
+</div><!-- #page -->
 
 <script type="text/javascript" src="assets/js/scripts.js"></script>
 </body>

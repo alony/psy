@@ -36,17 +36,12 @@
     font-size: 22px;
   }
 
-  #access .menu ul li {
-    padding: 8px 35px 0 35px;
-  }
-
-  body, #main, input, textarea {
+  body, #main, input, textarea, footer {
     background: #2f7791 repeat fixed;
   }
 
   #main {
     padding: 0;
-    height: 100vh;
   }
 
   #wrapper {
@@ -56,6 +51,7 @@
   #page {
     box-shadow: none;
     width: 100%;
+    max-width: none;
     margin: inherit 0;
     padding: inherit 0;
   }
@@ -74,8 +70,13 @@
   #access .menu ul li:hover {
     background-color: #6B94B4;
   }
+
   #access .menu ul li:hover a {
     color: #333;
+  }
+
+  p.underline {
+    text-decoration: underline;
   }
 
 </style>
@@ -84,6 +85,12 @@
 
 <body>
 <div id="page" class="hfeed">
+<article class="post hentry format-image page-header">
+  <header class="entry-header">
+    <h2 class="entry-title">Behandlungsgebühren / Honorar</h2>
+  </header>
+</article>
+
 <div id="wrapper">
 
 <div id="main">
@@ -91,16 +98,23 @@
 <div id="primary">
   <div id="content" role="main">
 
-  <!-- begin article -->
   <article class="post hentry format-image">
-    <header class="entry-header">
-      <h2 class="entry-title">Honorar</h2>
-    </header>
-  </div>
-  </article>
-
-  <article class="post hentry format-image">
+    <br>
     <div class="post hentry format-image">
+      <b>
+        <p class="intro left">Erstgespräch: 30 Minuten / EUR 50,-</p>
+
+        <p class="intro left">Coaching: 50 Minuten / EUR 100,-</p>
+      </b>
+
+      <br>
+
+      <p class="intro left underline">Psychotherapie vs. Coaching</p>
+      <p>Die Grenzen zwischen Coaching und Psychotherapie sind häufig schwimmend, da erfahrungsgemäß ähnliche Thematiken berührt werden.
+      Somit kommen auch ähnliche (teils gleiche) Techniken zur Anwendung.</p>
+
+      <p>Dennoch schreibt der Gesetzgeber vor, bei Coachingsitzungen die Mehrwertsteuer von 19% zu belasten (und an das Finanzamt abzuführen), was bei Psychotherapiesitzungen nicht verlangt wird.
+      </p>
 
     <div>
   </article>
@@ -118,11 +132,12 @@
   <nav id="access" class="access" role="navigation">
     <div id="menu" class="menu">
       <ul id="tiny">
-        <li><a href="ueber-mich">Über mich</a>
-        <li><a href="methoden">Methoden</a>
+        <li class="home"><a href="/"></a></li>
+        <li><a href="ueber-mich">Über mich</a></li>
+        <li><a href="methoden">Methoden</a></li>
         <li><a href="anfahrt">Anfahrt</a></li>
         <li><a href="kontakt">Kontakt / Termine</a></li>
-        <li><a href="honorar">Honorar</a></li>
+        <li class="active1"><a href="honorar">Honorar</a></li>
         <li><a href="ziel">Ziel</a></li>
       </ul>
     </div>

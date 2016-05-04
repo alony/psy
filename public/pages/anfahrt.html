@@ -36,17 +36,12 @@
     font-size: 22px;
   }
 
-  #access .menu ul li {
-    padding: 8px 35px 0 35px;
-  }
-
-  body, #main, input, textarea {
+  body, #main, input, textarea, footer {
     background: #2f7791 repeat fixed;
   }
 
   #main {
     padding: 0;
-    height: 100vh;
   }
 
   #wrapper {
@@ -56,6 +51,7 @@
   #page {
     box-shadow: none;
     width: 100%;
+    max-width: none;
     margin: inherit 0;
     padding: inherit 0;
   }
@@ -118,9 +114,10 @@
   <nav id="access" class="access" role="navigation">
     <div id="menu" class="menu">
       <ul id="tiny">
-        <li><a href="ueber-mich">Über mich</a>
-        <li><a href="methoden">Methoden</a>
-        <li><a href="anfahrt">Anfahrt</a></li>
+        <li class="home"><a href="/"></a></li>
+        <li><a href="ueber-mich">Über mich</a></li>
+        <li><a href="methoden">Methoden</a></li>
+        <li class="active1"><a href="anfahrt">Anfahrt</a></li>
         <li><a href="kontakt">Kontakt / Termine</a></li>
         <li><a href="honorar">Honorar</a></li>
         <li><a href="ziel">Ziel</a></li>

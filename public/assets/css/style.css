@@ -438,6 +438,26 @@ object {
 /*	STRUCTURE
 /*-----------------------------------------------------------------------------------*/
 
+.hentry.page-header {
+	background: #3C5364;
+  margin: 0;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.hentry.page-header header.entry-header{
+	margin-bottom: 0;
+}
+
+.hentry.page-header header.entry-header h2{
+	color: white;
+}
+
+.hentry .inner-image.right {
+	float: right;
+	margin-left: 20px;
+}
+
 #branding #site-title {
 	margin: 0 39px 39px 39px;
 }
@@ -445,26 +465,26 @@ object {
 #primary {
 	width: 100%;
 	position: relative;
-	height: 100vh;
 }
 
 #page {
 	-webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
 	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.4);
 	max-width: 1280px;
-	margin: 50px auto;
+	margin: 0 auto;
 }
 
 #wrapper {
-	background: #FFF;
 	border: 1px solid #f8f8f8;
 	-moz-box-shadow: inset 0 0 25px 0 rgba(0,0,0,0.15);
 	-webkit-box-shadow: inset 0 0 25px 0 rgba(0,0,0,0.15);
 	box-shadow: inset 0 0 25px 0 rgba(0,0,0,0.15);
+	height: 97vh;
+	position: relative;
 }
 
 #content {
-	margin: 0 39px;
+	margin: 0;
 	width: auto;
 }
 
@@ -476,7 +496,9 @@ object {
 
 /* Header */
 #branding {
-	position: relative;
+	position: absolute;
+	bottom: 52px;
+	width: 100%;
 	z-index: 9999;
 }
 #site-title {
@@ -647,11 +669,18 @@ input#s {
 #access .menu ul li {
 	position: relative;
 	display: inline-block;
-	padding: 0 15px;
+	padding: 8px 25px 0 25px;
 	z-index: 101;
-	padding-top: 8px;
 	background: none;
 	height: 34px;
+}
+
+#access .menu ul li.home {
+	background: transparent url('../images/home_white2.png') center 2px no-repeat;
+}
+#access .menu ul li.home a{
+	width: 32px;
+	height: 18px;
 }
 #access .menu ul li a {
 	display: inline-block;
@@ -666,6 +695,9 @@ input#s {
 #access .menu ul li:hover,
 #access .menu ul li.active {
 	background-color: #3c3c3c;
+}
+#access .menu ul li.active1 a {
+  color: #FABF8F;
 }
 #access .menu ul li ul {
 	position: absolute;
@@ -720,8 +752,6 @@ input#s {
 	margin: 0 auto;
 }
 
-
-
 /*-----------------------------------------------------------------------------------*/
 /*	CONTENT
 /*-----------------------------------------------------------------------------------*/
@@ -736,6 +766,11 @@ input#s {
 
 .hentry footer.entry-meta {
 	display: none;
+}
+
+.hentry p {
+	color: #FABF8F;
+	text-align: justify;
 }
 
 .no-results {
@@ -1589,9 +1624,12 @@ p.form-submit {
 /*	FOOTER
 /*-----------------------------------------------------------------------------------*/
 
-#colophon {
+footer {
 	clear: both;
-	margin: 40px -1px -1px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	margin: 20px -1px -1px;
 }
 
 #supplementary {

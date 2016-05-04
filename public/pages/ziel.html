@@ -36,17 +36,12 @@
     font-size: 22px;
   }
 
-  #access .menu ul li {
-    padding: 8px 35px 0 35px;
-  }
-
-  body, #main, input, textarea {
+  body, #main, input, textarea, footer {
     background: #2f7791 repeat fixed;
   }
 
   #main {
     padding: 0;
-    height: 100vh;
   }
 
   #wrapper {
@@ -56,6 +51,7 @@
   #page {
     box-shadow: none;
     width: 100%;
+    max-width: none;
     margin: inherit 0;
     padding: inherit 0;
   }
@@ -65,6 +61,11 @@
     font-size: 18px;
   }
 
+  .hentry ul li {
+    color: #FABF8F;
+    font-size: 14px;
+    list-style: circle inside;
+  }
   #access .menu ul {
     background-color: #3C5364;
   }
@@ -77,13 +78,17 @@
   #access .menu ul li:hover a {
     color: #333;
   }
-
 </style>
 
 </head>
 
 <body>
 <div id="page" class="hfeed">
+<article class="post hentry format-image page-header">
+  <header class="entry-header">
+    <h2 class="entry-title">Seele im Gleichgewicht</h2>
+  </header>
+</article>
 <div id="wrapper">
 
 <div id="main">
@@ -91,18 +96,35 @@
 <div id="primary">
   <div id="content" role="main">
 
-  <!-- begin article -->
-  <article class="post hentry format-image">
-    <header class="entry-header">
-      <h2 class="entry-title">Ziel</h2>
-    </header>
-  </div>
-  </article>
-
   <article class="post hentry format-image">
     <div class="post hentry format-image">
+      <br><br>
+      <div class="inner-image right">
+        <img src="assets/images/ziel.png" alt="Ziel" width="420"/>
+      </div>
 
-    <div>
+      <p>In der heutigen sehr schnelllebigen Zeit, welche geprägt ist von :
+        <ul>
+          <li>Leistungsdruck</li>
+          <li>Erwartungshaltung (durch anderer und auch durch uns selbst),</li>
+          <li>Informationsflut  durch Multimedia (TV, Handy, Smartphone, Tablet, Notebook etc.)</li>
+          <li>Sinnverlust</li>
+          <li>Krisen (auf globaler, aber auch auf ganz persönlicher Ebene)</li>
+        </ul>
+      </p>
+      <br>
+      <p>Besteht die Gefahr unser (seelisches) Gleichgewicht zu verlieren.<br>
+      Uns fehlt der Überblick und der Fokus auf die wesentlichen Bestandteile unseres Lebens, welche aber essentiell sind,  um einen gesunden Geist und Körper zu bewahren -  Ein “Ich” mit dem wir uns wohl- und zufrieden fühlen.</p>
+
+      <p>Häufig reichen schon die selben pessimistischen Gedanken über einen kurzen Zeitraum aus,
+      um unsere Gefühlsebene aus der Balance zu bringen.</p>
+
+      <p>Die Folge sind Gefühle der Traurigkeit, Niedergeschlagenheit, des gehetzt seins, Perspektivenlosigkeit
+      oder auch körperliche Beschwerden, für die sich einfach keine medizinische Ursache finden lässt.</p>
+
+      <p>In der gemeinsamen Arbeit mit Ihnen, möchte ich Ihnen helfen, Ihren ganz persönlichen Weg zu finden.
+      Ihren Weg zurück zu mehr Lebensfreude und Ausgeglichenheit. Zurück zu Ihrer Balance des Körpers und der Seele.</p>
+    </div>
   </article>
 </div>
 <!-- #branding -->
@@ -118,12 +140,13 @@
   <nav id="access" class="access" role="navigation">
     <div id="menu" class="menu">
       <ul id="tiny">
-        <li><a href="ueber-mich">Über mich</a>
-        <li><a href="methoden">Methoden</a>
+        <li class="home"><a href="/"></a></li>
+        <li><a href="ueber-mich">Über mich</a></li>
+        <li><a href="methoden">Methoden</a></li>
         <li><a href="anfahrt">Anfahrt</a></li>
         <li><a href="kontakt">Kontakt / Termine</a></li>
         <li><a href="honorar">Honorar</a></li>
-        <li><a href="ziel">Ziel</a></li>
+        <li class="active1"><a href="ziel">Ziel</a></li>
       </ul>
     </div>
   </nav>
