@@ -36,7 +36,7 @@
     font-size: 22px;
   }
 
-  body, #main, input, textarea, footer {
+  body, #main, footer {
     background: #2f7791 repeat fixed;
   }
 
@@ -79,25 +79,63 @@
 
 <body>
 <div id="page" class="hfeed">
+<article class="post hentry format-image page-header">
+  <header class="entry-header">
+    <h2 class="entry-title">Kontakt / Termin</h2>
+  </header>
+</article>
+
 <div id="wrapper">
 
 <div id="main">
 
 <div id="primary">
   <div id="content" role="main">
-
-  <!-- begin article -->
+  <br><br>
   <article class="post hentry format-image">
-    <header class="entry-header">
-      <h2 class="entry-title">Kontakt / Termin</h2>
-    </header>
-  </div>
-  </article>
+    <div class="map left">
+      <address>
+        Heilpraktiker Praxis für<br>
+        Coaching und Psychotherapie<br>
+        Grevenweg 72<br>
+        20537 Hamburg
+      </address>
 
-  <article class="post hentry format-image">
-    <div class="post hentry format-image">
+      <p>
+        In den Räumen von<br>
+        Sascha Bade (Klingel)<br>
+        Private Health Coaching
+      </p>
 
-    <div>
+      <p>
+        Termine nur nach Vereinbarung unter :<br>
+
+        Mail : <a href="mailto:kontakt@psy-hamburg.de">Kontakt@psy-hamburg.de</a><br>
+        Telefon : <a href="tel:+4917699345811">0176 – 99 34 5811</a>
+      </p>
+    </div>
+
+    <div class="map right">
+      <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+        <div class="row">
+          <label for="name">Name:</label><br />
+          <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+        </div>
+        <div class="row">
+          <label for="email">Email:</label><br />
+          <input id="email" class="input" name="email" type="text" value="" size="60" /><br />
+        </div>
+        <div class="row">
+          <label for="phone">Phone number:</label><br />
+          <input id="phone" class="input" name="phone" type="text" value="" size="60" /><br />
+        </div>
+        <div class="row">
+          <label for="message">Message:</label><br />
+          <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+        </div>
+        <input id="submit_button" type="submit" value="Send message" class="button" />
+      </form>
+    </div>
   </article>
 </div>
 <!-- #branding -->

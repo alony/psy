@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="assets/type/constantia.css" media="all" />
 <link rel="stylesheet" type="text/css" href="assets/type/merriweather.css" media="all" />
 <link rel="stylesheet" type="text/css" href="assets/css/queries.css" media="all" />
+<link rel='stylesheet' type='text/css' href='assets/css/simplelightbox.min.css' media="all" >
 <!--[if IE 8]>
 <link rel="stylesheet" type="text/css" href="assets/css/ie8.css" media="all" />
 <![endif]-->
@@ -73,11 +74,6 @@
   #access .menu ul li:hover a {
     color: #333;
   }
-  address {
-    color: #FABF8F;
-    font-size: larger;
-    font-weight: semi-bold;
-  }
 
 </style>
 
@@ -102,11 +98,12 @@
     <div class="left map">
       <p>Sie erreichen die</p>
 
-      <address>
+      <address class="relative">
         Heilpraktiker Praxis <br>
         für Psychotherapie und Coaching<br>
         Grevenweg 72<br>
         20537 Hamburg
+        <a href="assets/images/praxis.png" class="lightbox" id="praxis-link"></a>
       </address>
 
       <p>
@@ -161,5 +158,11 @@ src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJw_wQ6b2
   </footer><!-- #colophon -->
 
 <script type="text/javascript" src="assets/js/scripts.js"></script>
+<script type="text/javascript" src="assets/js/simple-lightbox.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('a.lightbox').simpleLightbox();
+  });
+</script>
 </body>
 </html>
