@@ -79,6 +79,44 @@ input, textarea {
 .wp-caption,
 .wp-caption-text {}
 
+.methods-list ul li {
+	list-style: url('../images/corner.png') inside;
+}
+.methods-list ul li.active {
+	list-style: url('../images/corner-right.png') inside;
+}
+.methods-list ul li {
+  position: relative;
+  margin-top: 30px;
+  padding: 10px 20px;
+}
+.methods-list ul li h4 {
+	color: #FABF8F;
+}
+.methods-list ul li h4:hover {
+	cursor: pointer;
+}
+.methods-list ul li:before, .methods-list ul li:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+
+}
+.methods-list ul li:after {
+  right: -2px;
+  height: 2px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#3C5364), to(transparent));
+  background-image: -webkit-linear-gradient(left, #3C5364, transparent);
+  background-image: -moz-linear-gradient(left, #3C5364, transparent);
+  background-image: -o-linear-gradient(left, #3C5364, transparent);
+}
+
+.methods-list ul li p {
+  display: none;
+  padding: 15px 23px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	GENERAL
 /*-----------------------------------------------------------------------------------*/
