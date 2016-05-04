@@ -544,6 +544,25 @@ object {
 	display: block;
 }
 
+.divider {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 5px;
+}
+#texture {
+	background: transparent url('../images/texture.jpg');
+}
+#texture1 {
+	background: transparent url('../images/texture1.jpg');
+}
+#texture2 {
+	background: transparent url('../images/texture2.jpg');
+}
+#texture3 {
+	background: transparent url('../images/texture3.jpg');
+}
+
 .social {
 	position: absolute;
 	top:51px;
