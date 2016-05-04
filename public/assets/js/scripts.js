@@ -5,6 +5,16 @@ jQuery(document).ready(function() {
   jQuery('div#style-select select').on("change", function() {
     window.location.href = $(this).val();
   });
+
+  jQuery('body').on("mouseup vmouseup", function(e) {
+    // send event into iframe
+    var iframe = document.getElementById("iframe-image-slider");
+
+    if (iframe) {
+      $(iframe.contentDocument).find('.cd-handle').removeClass('draggable');
+      $(iframe.contentDocument).find('.cd-resize-img').removeClass('resizable');
+    }
+  });
 });
 
 /*-----------------------------------------------------------------------------------*/
@@ -20,6 +30,20 @@ jQuery(document).ready(function() {
 $(document).ready(function(){
 	$('.format-chat li:even').css('background-color','#e9e9e9');
 	$('.format-chat li:odd').css('background-color','#f4f4f4');
+
+  $('form#contact_form').on('submit', function(e) {
+    var msg = "Emails send doesn't work before production config :P\n\n";
+    msg += "But meanwhile the data is:\n";
+    data = $(this).serializeArray();
+
+    for (i=0;i<data.length;i++) {
+      msg += data[i].name + ": " + data[i].value + "\n";
+    }
+
+    alert(msg);
+
+    return false;
+  });
 });
 
 

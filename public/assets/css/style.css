@@ -519,7 +519,6 @@ object {
 	position: absolute;
 	bottom: 52px;
 	width: 100%;
-	z-index: 9999;
 }
 #site-title {
 	padding: 39px 0 0;
