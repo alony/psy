@@ -445,6 +445,15 @@ object {
   padding: 20px 0;
 }
 
+.hentry.post.format-image .map {
+	width: 48%;
+}
+.hentry.post.format-image .map.left {
+	float: left;
+}
+.hentry.post.format-image .map.right {
+	float: right;
+}
 .hentry.page-header header.entry-header{
 	margin-bottom: 0;
 }
@@ -620,6 +629,18 @@ input#s {
     width: 150px;
 }
 
+span.ubahn {
+	font-weight: bold;
+	font-size: larger;
+}
+span.ubahn span.u2 {
+	color: #ff3333;
+}
+
+span.ubahn span.u4 {
+	color: #339999;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	MENU
 /*-----------------------------------------------------------------------------------*/
@@ -676,7 +697,10 @@ input#s {
 }
 
 #access .menu ul li.home {
-	background: transparent url('../images/home_white2.png') center 2px no-repeat;
+	background: transparent url('../images/home_white.png') center 2px no-repeat;
+}
+#access .menu ul li.home.active1 {
+	background: transparent url('../images/home_active.png') center 2px no-repeat;
 }
 #access .menu ul li.home a{
 	width: 32px;
