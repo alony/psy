@@ -586,7 +586,7 @@ object {
 	width: 100%;
 	position: absolute;
 	bottom: 0;
-	height: 5px;
+	height: 2px;
 }
 #texture {
 	background: transparent url('../images/texture.jpg');
