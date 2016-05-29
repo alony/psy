@@ -10,7 +10,8 @@ class App
       "/kontakt" => "public/pages/kontakt.html",
       "/methoden" => "public/pages/methoden.html",
       "/ueber-mich" => "public/pages/about.html",
-      "/ziel" => "public/pages/ziel.html"
+      "/ziel" => "public/pages/ziel.html",
+      "/impressum" => "public/pages/impressum.html"
     }
   end
 
