@@ -549,6 +549,12 @@ object {
 	clear: both;
 	padding: 8px 0 0 0;
 	background-color: #555;
+	margin-bottom: 80px;
+}
+
+iframe#iframe-image-slider {
+	width: 850px;
+	height: 540px;
 }
 
 /* Header */

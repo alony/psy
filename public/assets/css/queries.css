@@ -8,32 +8,6 @@
 	}
 }
 
-@media (max-width: 1140px) {
-	body {
-		padding: 40px;
-	}
-	#page {
-		margin: 0 auto;
-	}
-	/* Disable triange */
-	.triangle-l {
-		display: none;
-	}
-	.triangle-r {
-		display: none;
-	}
-	#access .menu {
-		margin-bottom: 31px;
-	}
-	#access .menu ul {
-		margin: 0 -1px;
-	}
-	/* Gallery thumbnails will be 4 columns from now on */
-	.gallery-items li.item {
-		width: 25%;
-	}
-}
-
 @media (max-width: 800px) {
 	/* Disable body padding */
 	body {
@@ -42,6 +16,15 @@
 	/* And a full-width comment form */
 	#respond {
 		width: auto;
+	}
+
+  div.hentry {
+  	width: 95%;
+  	padding: 10px;
+  }
+	iframe#iframe-image-slider {
+		width: 100%;
+		height: 480px;
 	}
 }
 @media (max-width: 650px) {
@@ -60,7 +43,7 @@
 	}
 	#branding #site-title img {
 		display: inline;
-	}	
+	}
 	.social {
 		position: relative;
 		text-align: center;
@@ -72,13 +55,13 @@
 	.social ul {
 		float: none;
 		text-align: center;
-	}	
+	}
 	.social ul li {
 		float: none;
 		display: inline;
 		margin: 0;
 		padding: 0 2px;
-	}	
+	}
 	.social ul li img {
 		display: inherit;
 		vertical-align: bottom;
@@ -92,16 +75,16 @@
 		float: none;
 	    width: 174px;
 	    display: block;
-	}	
+	}
 	.social .widget_search .search-text-box:focus {
 	    width: 174px;
-	}	
+	}
 	.social input.search-submit-button {
 		float: none;
 		position: absolute;
 		right: 0;
 		top:0;
-	}	
+	}
 	/* Floated content doesn't work well at this size */
 	.alignleft,
 	.alignright {
@@ -142,7 +125,7 @@
 
 }
 @media (max-width: 480px) {
-	
+
 	/* Dropdown menu size */
 	.selectnav {
 		width: 75%;
@@ -194,7 +177,7 @@
 	}
 	.gallery-items {
 		margin: 0 -30px 20px;
-		
+
 	}
 	.map.full {
 		margin: 0 -29px;
