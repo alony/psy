@@ -594,18 +594,7 @@ iframe#iframe-image-slider {
 	position: absolute;
 	bottom: 0;
 	height: 2px;
-}
-#texture {
 	background: transparent url('../images/texture.jpg');
-}
-#texture1 {
-	background: transparent url('../images/texture1.jpg');
-}
-#texture2 {
-	background: transparent url('../images/texture2.jpg');
-}
-#texture3 {
-	background: transparent url('../images/texture3.jpg');
 }
 
 .social {
