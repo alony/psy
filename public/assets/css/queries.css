@@ -24,7 +24,7 @@
   }
 	iframe#iframe-image-slider {
 		width: 100%;
-		height: 480px;
+		height: 390px;
 	}
 }
 @media (max-width: 650px) {
