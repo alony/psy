@@ -16,10 +16,10 @@ jQuery(document).ready(function() {
     }
   });
 
-  jQuery('.methods-list ul li h4').on('click', function(e) {
-    $(this).parent('li').toggleClass('active');
-    $(this).parent('li').find('p').slideToggle();
-  });
+  // jQuery('.methods-list ul li h4').on('click', function(e) {
+  //   $(this).parent('li').toggleClass('active');
+  //   $(this).parent('li').find('p').slideToggle();
+  // });
 });
 
 /*-----------------------------------------------------------------------------------*/

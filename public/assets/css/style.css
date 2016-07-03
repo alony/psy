@@ -428,6 +428,9 @@ object {
 	text-align: right;
   margin-right: 25px;
 }
+.intro.right large {
+	font-size: x-large;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*	COLUMNS
@@ -497,13 +500,18 @@ object {
 .hentry.post.format-image .map.right {
 	float: right;
 }
-.hentry.post.format-image .map.left address a{
+.hentry.post.format-image .map.right span {
+	color: #FABF8F;
+	float: right;
+}
+
+/*.hentry.post.format-image .map.left address a{
   position: absolute;
   margin-left: 15px;
   width: 24px;
   height: 24px;
   background: transparent url('../images/open-icon.png') center center no-repeat;
-}
+}*/
 .hentry.page-header header.entry-header{
 	margin-bottom: 0;
 }

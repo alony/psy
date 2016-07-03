@@ -11,7 +11,9 @@ class App
       "/methoden" => "public/pages/methoden.html",
       "/ueber-mich" => "public/pages/about.html",
       "/ziel" => "public/pages/ziel.html",
-      "/impressum" => "public/pages/impressum.html"
+      "/impressum" => "public/pages/impressum.html",
+      "/kooperation" => "public/pages/kooperation.html",
+      "/ueberbrueckungszeit" => "public/pages/ueberbrueckungszeit.html"
     }
   end
 
