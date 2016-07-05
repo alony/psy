@@ -502,7 +502,8 @@ object {
 }
 .hentry.post.format-image .map.right span {
 	color: #FABF8F;
-	float: right;
+	text-align: center;
+	display: block;
 }
 
 /*.hentry.post.format-image .map.left address a{
