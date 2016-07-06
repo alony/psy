@@ -324,7 +324,7 @@ sub {
 
 /* Links */
 a {
-	color: #ca6d6d;
+	color: #26343f;
 	text-decoration: none;
 	-webkit-transition:all 200ms ease-in;
 	-o-transition:all 200ms ease-in;
@@ -425,6 +425,7 @@ object {
 	text-align: left;
 }
 .intro.right {
+	margin-top: -25px;
 	text-align: right;
   margin-right: 25px;
 }
