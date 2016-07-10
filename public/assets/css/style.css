@@ -324,7 +324,7 @@ sub {
 
 /* Links */
 a {
-	color: #26343f;
+	color: white;
 	text-decoration: none;
 	-webkit-transition:all 200ms ease-in;
 	-o-transition:all 200ms ease-in;
