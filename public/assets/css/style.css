@@ -814,7 +814,7 @@ div.hvv span.bus {
 	background-color: #3c3c3c;
 }
 #access .menu ul li.active1 a {
-  color: #FABF8F;
+  color: #FABF8F !important;
 }
 #access .menu ul li ul {
 	position: absolute;
