@@ -28,6 +28,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: 0;
 	vertical-align: baseline;
 }
+h1, h2, h3, h4, h5, h6, #access .menu, ul.tabs li a, address {
+  font-family: 'PT Serif', serif;
+}
 :focus {/* remember to define focus styles! */
 	outline: 0;
 }
@@ -413,7 +416,7 @@ object {
 } */
 
 .intro {
-	font-family: 'MerriweatherRegular';
+	font-family: 'PT Serif', serif;
 	font-size: 20px;
 	line-height: 32px;
 	color: #a0a0a0;
@@ -665,7 +668,7 @@ input#s {
     border: 1px solid #a3a3a3;
     border-right: 0;
     color: #a0a0a0;
-    font-family: 'MerriweatherRegular';
+    font-family: 'PT Serif', serif;
     font-size: 12px;
     display: block;
     float: left;
@@ -687,7 +690,7 @@ input#s {
     border-right: 0;
     color: #a0a0a0;
     float: right;
-    font-family: 'MerriweatherRegular';
+    font-family: 'PT Serif', serif;
     font-size: 12px;
 }
 .social input.search-submit-button {
@@ -1450,7 +1453,7 @@ input[type=text] {
 	right: 20px;
 	text-decoration: none;
 	top: 10px;
-	font-family: 'MerriweatherRegular';
+	font-family: 'PT Serif', serif;
 }
 #cancel-comment-reply-link:hover,
 #respond #cancel-comment-reply-link:hover {
