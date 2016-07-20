@@ -101,6 +101,7 @@ input, textarea {
 }
 .methods-list ul li h4 {
 	color: #FABF8F;
+	font-size: 22px;
 }
 .methods-list ul li h4:hover {
 	cursor: pointer;
@@ -262,7 +263,6 @@ address {
 	position: relative;
 	margin: 0 0 40px;
   color: #FABF8F;
-  font-size: larger;
 }
 ins {
 	background: #fff9c0;
@@ -895,7 +895,6 @@ div.hvv span.bus {
 
 .hentry p {
 	color: #FABF8F;
-	text-align: justify;
 }
 
 .no-results {
