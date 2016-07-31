@@ -1,5 +1,16 @@
 /* =Responsive Structure
 ----------------------------------------------- */
+@media (max-width: 1350px) {
+	/* Disable fixed navigation buttons */
+
+	#access .menu ul li {
+	  padding: 8px 10px 0 10px;
+	}
+	#access .menu ul li a {
+		font-size: 18px;
+	}
+}
+
 @media (max-width: 1200px) {
 	/* Disable fixed navigation buttons */
 	#nav-single-fixed,
