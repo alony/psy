@@ -1,4 +1,156 @@
-/*!
- * SelectNav.js (v. 0.1)
+/**
+ * @preserve SelectNav.js (v. 0.1)
  * Converts your <ul>/<ol> navigation into a dropdown list for small screens
- */window.selectnav=function(){"use strict";var a=function(a,b){function l(a){var b;a||(a=window.event),a.target?b=a.target:a.srcElement&&(b=a.srcElement),b.nodeType===3&&(b=b.parentNode),b.value&&(window.location.href=b.value)}function m(a){var b=a.nodeName.toLowerCase();return b==="ul"||b==="ol"}function n(a){for(var b=1;document.getElementById("selectnav"+b);b++);return a?"selectnav"+b:"selectnav"+(b-1)}function o(a){i++;var b=a.children.length,c="",k="",l=i-1;if(!b)return;if(l){while(l--)k+=g;k+=" "}for(var p=0;p<b;p++){var q=a.children[p].children[0],r=q.innerText||q.textContent,s="";d&&(s=q.className.search(d)!==-1||q.parentElement.className.search(d)!==-1?j:""),e&&!s&&(s=q.href===document.URL?j:""),c+='<option value="'+q.href+'" '+s+">"+k+r+"</option>";if(f){var t=a.children[p].children[1];t&&m(t)&&(c+=o(t))}}return i===1&&h&&(c='<option value="">'+h+"</option>"+c),i===1&&(c='<select class="selectnav" id="'+n(!0)+'">'+c+"</select>"),i--,c}a=document.getElementById(a);if(!a)return;if(!m(a))return;document.documentElement.className+=" js";var c=b||{},d=c.activeclass||"active",e=typeof c.autoselect=="boolean"?c.autoselect:!0,f=typeof c.nested=="boolean"?c.nested:!0,g=c.indent||"→",h=c.label||"- Navigation -",i=0,j=" selected ";a.insertAdjacentHTML("afterend",o(a));var k=document.getElementById(n());return k.addEventListener&&k.addEventListener("change",l),k.attachEvent&&k.attachEvent("onchange",l),k};return function(b,c){a(b,c)}}();
+ * https://github.com/lukaszfiszer/selectnav.js
+ */
+
+window.selectnav = (function(){
+
+"use strict";
+
+  var selectnav = function(element,options){
+
+    element = document.getElementById(element);
+
+    // return immediately if element doesn't exist
+    if( ! element){
+      return;
+    }
+
+    // return immediately if element is not a list
+    if( ! islist(element) ){
+      return;
+    }
+
+    // return immediately if no support for insertAdjacentHTML (Firefox 7 and under)
+    if( ! ('insertAdjacentHTML' in window.document.documentElement) ){
+      return;
+    }
+
+    // add a js class to <html> tag
+    document.documentElement.className += " js";
+
+    // retreive options and set defaults
+    var o = options || {},
+
+      activeclass = o.activeclass || 'active',
+      autoselect = typeof(o.autoselect) === "boolean" ? o.autoselect : true,
+      nested = typeof(o.nested) === "boolean" ? o.nested : true,
+      indent = o.indent || "→",
+      label = o.label || "- Navigation -",
+
+      // helper variables
+      level = 0,
+      selected = " selected ";
+
+    // insert the freshly created dropdown navigation after the existing navigation
+    element.insertAdjacentHTML('afterend', parselist(element) );
+
+    var nav = document.getElementById(id());
+
+    // autoforward on click
+    if (nav.addEventListener) {
+      nav.addEventListener('change',goTo);
+    }
+    if (nav.attachEvent) {
+      nav.attachEvent('onchange', goTo);
+    }
+
+    return nav;
+
+    function goTo(e){
+
+      // Crossbrowser issues - http://www.quirksmode.org/js/events_properties.html
+      var targ;
+      if (!e) e = window.event;
+      if (e.target) targ = e.target;
+      else if (e.srcElement) targ = e.srcElement;
+      if (targ.nodeType === 3) // defeat Safari bug
+        targ = targ.parentNode;
+
+      if(targ.value) window.location.href = targ.value;
+    }
+
+    function islist(list){
+      var n = list.nodeName.toLowerCase();
+      return (n === 'ul' || n === 'ol');
+    }
+
+    function id(nextId){
+      for(var j=1; document.getElementById('selectnav'+j);j++);
+      return (nextId) ? 'selectnav'+j : 'selectnav'+(j-1);
+    }
+
+    function parselist(list){
+
+      // go one level down
+      level++;
+
+      var length = list.children.length,
+        html = '',
+        prefix = '',
+        k = level-1
+        ;
+
+      // return immediately if has no children
+      if (!length) {
+        return;
+      }
+
+      if(k) {
+        while(k--){
+          prefix += indent;
+        }
+        prefix += " ";
+      }
+
+      for(var i=0; i < length; i++){
+
+        var link = list.children[i].children[0];
+        if(typeof(link) !== 'undefined'){
+          var text = link.innerText || link.textContent;
+          var isselected = '';
+
+          if(activeclass){
+            isselected = link.className.search(activeclass) !== -1 || link.parentNode.className.search(activeclass) !== -1 ? selected : '';
+          }
+
+          if(autoselect && !isselected){
+            isselected = link.href === document.URL ? selected : '';
+          }
+
+          html += '<option value="' + link.href + '" ' + isselected + '>' + prefix + text +'</option>';
+
+          if(nested){
+            var subElement = list.children[i].children[1];
+            if( subElement && islist(subElement) ){
+              html += parselist(subElement);
+            }
+          }
+        }
+      }
+
+      // adds label
+      if(level === 1 && label) {
+        html = '<option value="">' + label + '</option>' + html;
+      }
+
+      // add <select> tag to the top level of the list
+      if(level === 1) {
+        html = '<select class="selectnav" id="'+id(true)+'">' + html + '</select>';
+      }
+
+      // go 1 level up
+      level--;
+
+      return html;
+    }
+
+  };
+
+  return function (element,options) {
+    return selectnav(element,options);
+  };
+
+
+})();

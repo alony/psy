@@ -61,16 +61,6 @@
     text-decoration: underline;
   }
 
-  .honorars {
-    font-weight: bold;
-    overflow: hidden;
-  }
-
-  .honorars div {
-    float: left;
-    padding-right: 5px;
-  }
-
 </style>
 
 </head>
@@ -93,32 +83,31 @@
   <article class="post hentry format-image">
     <br>
     <div class="post hentry format-image">
-      <div class="honorars">
-        <div class="left">
-          <p class="intro left">Erstgespräch: </p>
+      <table class="honorars">
+        <tr>
+          <td>Erstgespräch: </td>
+          <td>EUR 50,-</td>
+          <td>/ 30 Minuten</td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <span class="smaller">(Im Falle einer Zusammenarbeit, wird die Gebühr des Erstgesprächs auf die erste Siztung angerechnet)</span>
+            <br><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Psychotherapie:</td>
+          <td>EUR 80,-</td>
+          <td>/ 50 Minuten:</td>
+        </tr>
+        <tr>
+          <td>Coaching:</td>
+          <td>EUR 100,-</td>
+          <td>/ 50 Minuten:</td>
+        </tr>
+      </table>
 
-          <p class="intro left">Psychotherapie: </p>
-
-          <p class="intro left">Coaching: </p>
-        </div>
-
-        <div class="right">
-          <p class="intro left">EUR 50,-</p>
-
-          <p class="intro left">EUR 80,-</p>
-
-          <p class="intro left">EUR 100,-</p>
-        </div>
-        <div class="right">
-          <p class="intro left">/ 30 Minuten</p>
-
-          <p class="intro left">/ 50 Minuten</p>
-
-          <p class="intro left">/ 50 Minuten</p>
-        </div>
-
-      </div>
-
+      <br>
 
       <p>Oben angegebene Behandlungsgebühren sind von den gesetztlichen Krankenkassen nicht erstattungsfähig.<br>
       Bei privaten Krankenkassen ist eine Teilerstattung möglich (Bitte erkundigen Sie sich bei Ihrer Krankenkasse)
@@ -132,6 +121,8 @@
 
       <p>Dennoch schreibt der Gesetzgeber vor, bei Coachingsitzungen die Umsatzsteuer von 19% zu belasten (und an das Finanzamt abzuführen), was bei Psychotherapiesitzungen nicht verlangt wird.
       </p>
+
+      <p>Um ein Coaching handelt es sich, wenn die Grenze zur diagnostiezierbaren Erkrankung noch nicht überschritten ist. Hier geht es häufig um die Lösung kommunikativer und sachlicher Probleme ohne pathologischen (erkrankungs) Hintergrund.</p>
 
     <div>
   </article>
@@ -147,7 +138,7 @@
   <nav id="access" class="access" role="navigation">
     <div id="menu" class="menu">
       <ul id="tiny">
-        <li class="home"><a href="/"></a></li>
+        <li class="home" data-text="Home"><a href="/"></a></li>
         <li><a href="ueber-mich">Über mich</a></li>
         <li><a href="ziel">Ziel</a></li>
         <li><a href="ueberbrueckungszeit">Überbrückungszeit</a></li>

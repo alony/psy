@@ -127,6 +127,16 @@ input, textarea {
   padding: 15px 23px;
 }
 
+.honorars td{
+	font-weight: bold;
+  color: #FABF8F;
+  padding-right: 5px;
+}
+.honorars td .smaller {
+	position: absolute;
+	font-weight: normal;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	GENERAL
 /*-----------------------------------------------------------------------------------*/
