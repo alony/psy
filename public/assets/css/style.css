@@ -779,12 +779,15 @@ div.hvv span.bus {
 }
 #access .menu {
 	list-style: none;
+	text-align: center;
+	background-color: #3C5364;
 	font-weight: normal;
 	position: relative;
 	font-family: 'Raleway';
 }
 #access .menu ul {
 	margin: 0;
+	display: inline-block;
 	list-style-type: none;
 	letter-spacing: normal;
 	position: relative;

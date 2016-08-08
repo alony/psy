@@ -10,20 +10,20 @@ window.selectnav = (function(){
 
   var selectnav = function(element,options){
 
-    element = document.getElementById(element);
+    // return immediately if no support for insertAdjacentHTML (Firefox 7 and under)
+    if( ! ('insertAdjacentHTML' in window.document.documentElement) ){
+      return;
+    }
+
+    var elements = $(element);
 
     // return immediately if element doesn't exist
-    if( ! element){
+    if( ! elements.length){
       return;
     }
 
     // return immediately if element is not a list
-    if( ! islist(element) ){
-      return;
-    }
-
-    // return immediately if no support for insertAdjacentHTML (Firefox 7 and under)
-    if( ! ('insertAdjacentHTML' in window.document.documentElement) ){
+    if( ! islist(elements[0]) ){
       return;
     }
 
@@ -44,7 +44,7 @@ window.selectnav = (function(){
       selected = " selected ";
 
     // insert the freshly created dropdown navigation after the existing navigation
-    element.insertAdjacentHTML('afterend', parselist(element) );
+    elements.last()[0].insertAdjacentHTML('afterend', parselist(elements) );
 
     var nav = document.getElementById(id());
 
@@ -81,16 +81,19 @@ window.selectnav = (function(){
       return (nextId) ? 'selectnav'+j : 'selectnav'+(j-1);
     }
 
-    function parselist(list){
+    function parselist(lists){
 
       // go one level down
       level++;
 
-      var length = list.children.length,
+      var length = 0,
         html = '',
         prefix = '',
-        k = level-1
-        ;
+        k = level-1;
+
+      for(var i=0; i < lists.length; i++){
+        length += lists[i].children.length;
+      }
 
       // return immediately if has no children
       if (!length) {
@@ -104,27 +107,31 @@ window.selectnav = (function(){
         prefix += " ";
       }
 
-      for(var i=0; i < length; i++){
+      for(var j=0; j < lists.length; j++){
+        for(var i=0; i < lists[j].children.length; i++){
 
-        var link = list.children[i].children[0];
-        if(typeof(link) !== 'undefined'){
-          var text = link.innerText || link.textContent;
-          var isselected = '';
+          var link = lists[j].children[i].children[0];
+          if(typeof(link) !== 'undefined'){
+            var text = link.innerText || link.textContent;
+            if ( !text.length )
+              text = link.getAttribute("data-text");
+            var isselected = '';
 
-          if(activeclass){
-            isselected = link.className.search(activeclass) !== -1 || link.parentNode.className.search(activeclass) !== -1 ? selected : '';
-          }
+            if(activeclass){
+              isselected = link.className.search(activeclass) !== -1 || link.parentNode.className.search(activeclass) !== -1 ? selected : '';
+            }
 
-          if(autoselect && !isselected){
-            isselected = link.href === document.URL ? selected : '';
-          }
+            if(autoselect && !isselected){
+              isselected = link.href === document.URL ? selected : '';
+            }
 
-          html += '<option value="' + link.href + '" ' + isselected + '>' + prefix + text +'</option>';
+            html += '<option value="' + link.href + '" ' + isselected + '>' + prefix + text +'</option>';
 
-          if(nested){
-            var subElement = list.children[i].children[1];
-            if( subElement && islist(subElement) ){
-              html += parselist(subElement);
+            if(nested){
+              var subElement = lists[j].children[i].children[1];
+              if( subElement && islist(subElement) ){
+                html += parselist(subElement);
+              }
             }
           }
         }

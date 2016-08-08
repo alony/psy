@@ -19,6 +19,17 @@
 	}
 }
 
+@media (max-width: 1100px) {
+	#branding #menu {
+		background-color: #2f7791;
+	}
+  #branding #menu ul {
+  	display: block;
+  	width: 100%;
+  	margin: 0 0 3px 0;
+  }
+}
+
 @media (max-width: 800px) {
 	/* Disable body padding */
 	body {
@@ -40,12 +51,14 @@
 }
 @media (max-width: 650px) {
 	/* Disable menu */
-	#access .menu ul#tiny {
+	#branding #menu ul {
 		display: none;
 	}
 	/* Enable dropdown menu */
 	.selectnav {
 		display: block;
+		font-size: 18px;
+		width: 85%;
 	}
 	/* Reorganize header elements */
 	#branding #site-title {

@@ -58,7 +58,7 @@ $(document).ready(function(){
 /*-----------------------------------------------------------------------------------*/
 
 $(document).ready(function() {
-	selectnav('tiny', {
+	selectnav("#branding .menu ul", {
 		label: '--- Navigation --- ',
 		indent: '-'
 	});
