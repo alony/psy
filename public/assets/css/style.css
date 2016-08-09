@@ -502,6 +502,9 @@ object {
 /*	STRUCTURE
 /*-----------------------------------------------------------------------------------*/
 
+.placeholder {
+	height: 5vh;
+}
 .hentry.page-header {
 	background: #3C5364;
   margin: 0;

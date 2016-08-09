@@ -63,6 +63,7 @@
 	}
 	.hentry {
 		width: 90%;
+		overflow: hidden;
 	}
 	.hentry.post.format-image .map {
 		width: 100%;
@@ -102,6 +103,16 @@
 	.hentry img.about-pic {
 		float: none;
 		display: block;
+		width: 100%;
+	}
+	.hentry img.ziel-pic {
+		float: none;
+		display: block;
+		width: 100%;
+	}
+	.hentry .inner-image.right {
+		float: none;
+		margin-left: 0;
 	}
 	.one-half, .one-third, .two-third, .three-fourth, .one-fourth, .one-fifth, .one-sixth {
 		float: none;
