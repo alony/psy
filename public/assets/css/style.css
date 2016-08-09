@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, #access .menu, ul.tabs li a, address {
 }
 
 p, span, a, address, input, div, li {
-	font-size: 18px;
+	font-size: 14pt;
 }
 
 :focus {/* remember to define focus styles! */
@@ -432,9 +432,9 @@ object {
 
 .intro {
 	font-family: 'PT Serif', serif;
-	font-size: 20px;
-	line-height: 32px;
-	color: #a0a0a0;
+	font-size: 18pt;
+	line-height: 22pt;
+	color: #FABF8F;
 	text-align: center;
 	margin-top: -9px;
 	background: transparent repeat-x center bottom;
@@ -587,10 +587,11 @@ iframe#iframe-image-slider {
 /* Header */
 #branding {
 	position: fixed;
-	bottom: 52px;
+	bottom: 0;
 	width: 100%;
 	padding-top: 20px;
 	background-color: #2f7791;
+	padding-bottom: 32pt;
 }
 #site-title {
 	padding: 39px 0 0;
@@ -793,7 +794,7 @@ div.hvv span.bus {
 	position: relative;
 	text-align: center;
 	z-index: 1001;
-	height: 42px;
+	height: 32pt;
 	background-color: #3C5364;
 	-webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
@@ -802,10 +803,10 @@ div.hvv span.bus {
 #access .menu ul li {
 	position: relative;
 	display: inline-block;
-	padding: 8px 19px 0 19px;
+	padding: 6pt 12pt 0 12pt;
 	z-index: 101;
 	background: none;
-	height: 34px;
+	height: 20pt;
 }
 #access .menu ul li.home {
 	background: transparent url('../images/home_white.png') center 2px no-repeat;
@@ -815,10 +816,10 @@ div.hvv span.bus {
 }
 #access .menu ul li.home a{
 	width: 32px;
-	height: 18px;
+	height: 15pt;
 }
 #access .menu ul li a {
-  font-size: 20px;
+  font-size: 15pt;
   color: white !important;
 	display: inline-block;
 	text-decoration: none;
@@ -895,12 +896,41 @@ div.hvv span.bus {
 /*	CONTENT
 /*-----------------------------------------------------------------------------------*/
 
+body, #main, input, textarea, footer {
+  background: #2f7791 repeat fixed;
+}
+
+#main {
+  padding: 0;
+}
+
+#wrapper {
+  border: none;
+}
+
+#page {
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+  margin: inherit 0;
+  padding: inherit 0;
+}
+
+p.underline {
+  text-decoration: underline;
+}
+
 .hentry {
 	position: relative;
 	padding-bottom: 20px;
 	margin: 30px auto 0 auto;
 	background: transparent repeat-x center bottom;
   width: 900px;
+}
+
+.hentry img.about-pic {
+	float: right;
+	border: 6pt solid #3C5364;
 }
 
 .hentry footer.entry-meta {
@@ -926,7 +956,7 @@ div.hvv span.bus {
 .entry-title {
 	color: #FABF8F;
 	margin: 0 0 5px 0;
-	font-size: 24px;
+  font-size: 18pt;
 }
 .entry-title,
 .entry-title a {
@@ -1850,7 +1880,7 @@ footer {
 /* Site Generator Line */
 #site-generator {
 	color: #999;
-	font-size: 14px;
+	font-size: 11pt;
 	line-height: 1.7em;
 	padding: 0.7em 0.5em;
 	text-align: center;

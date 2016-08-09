@@ -68,7 +68,7 @@
 		width: 100%;
 	}
 	#branding {
-		bottom: 2.7em;
+		padding-bottom: 34pt;
 	}
 	#wrapper {
     padding-bottom: 105px;
@@ -94,51 +94,14 @@
 	#branding #site-title img {
 		display: inline;
 	}
-	.social {
-		position: relative;
-		text-align: center;
-		min-width: inherit;
-		top: auto;
-		right: auto;
-		margin-bottom: 30px;
-	}
-	.social ul {
-		float: none;
-		text-align: center;
-	}
-	.social ul li {
-		float: none;
-		display: inline;
-		margin: 0;
-		padding: 0 2px;
-	}
-	.social ul li img {
-		display: inherit;
-		vertical-align: bottom;
-	}
-	.social .widget_search {
-	    width: 185px;
-	    margin: 0 auto 30px auto;
-	    position: relative;
-	}
-	.social .widget_search  .search-text-box {
-		float: none;
-	    width: 174px;
-	    display: block;
-	}
-	.social .widget_search .search-text-box:focus {
-	    width: 174px;
-	}
-	.social input.search-submit-button {
-		float: none;
-		position: absolute;
-		right: 0;
-		top:0;
-	}
 	/* Floated content doesn't work well at this size */
 	.alignleft,
 	.alignright {
 		float: none;
+	}
+	.hentry img.about-pic {
+		float: none;
+		display: block;
 	}
 	.one-half, .one-third, .two-third, .three-fourth, .one-fourth, .one-fifth, .one-sixth {
 		float: none;
@@ -205,7 +168,7 @@
 		margin: 20px 0 0 20px;
 	}
 	#branding {
-		bottom: 72px;
+		padding-bottom: 72px;
 	}
 	iframe#iframe-image-slider {
 		height: 260px;
@@ -245,7 +208,7 @@
 		margin: 0 -29px;
 	}
 	#branding {
-		bottom: 92px;
+		padding-bottom: 92px;
 	}
 	iframe#iframe-image-slider {
 		height: 150px;
