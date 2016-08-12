@@ -37,15 +37,18 @@ $(document).ready(function(){
 	$('.format-chat li:odd').css('background-color','#f4f4f4');
 
   $('form#contact_form').on('submit', function(e) {
-    var msg = "Emails send doesn't work before production config :P\n\n";
-    msg += "But meanwhile the data is:\n";
-    data = $(this).serializeArray();
 
-    for (i=0;i<data.length;i++) {
-      msg += data[i].name + ": " + data[i].value + "\n";
-    }
-
-    alert(msg);
+    $.ajax({
+      type: "POST",
+      url: "http://secretary-.herokuapp.com/email/",
+      data: JSON.stringify($(this).serializeArray()),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data) { debugger },
+      failure: function(errMsg) {
+          debugger;
+      }
+    });
 
     return false;
   });
