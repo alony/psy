@@ -753,7 +753,9 @@ div.hvv span.bus {
 	background: transparent url('../images/bus.png') left center no-repeat;
 	padding-left: 30px;
 }
-
+div.hvv a {
+  color: #111 important;
+}
 /*-----------------------------------------------------------------------------------*/
 /*	MENU
 /*-----------------------------------------------------------------------------------*/
