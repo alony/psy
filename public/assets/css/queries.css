@@ -48,6 +48,10 @@
 	.placeholder {
 		display: none;
 	}
+	#wrapper {
+    padding-bottom: 125px;
+  }
+
 }
 
 @media (max-width: 800px) {
@@ -74,10 +78,6 @@
 	#branding {
 		padding-bottom: 34pt;
 	}
-	#wrapper {
-    padding-bottom: 125px;
-  }
-
 }
 @media (max-width: 650px) {
 	/* Disable menu */
