@@ -38,17 +38,12 @@ $(document).ready(function(){
 
   $('form#contact_form').on('submit', function(e) {
 
-    $.ajax({
-      type: "POST",
-      url: "http://secretary-.herokuapp.com/email/",
-      data: JSON.stringify($(this).serializeArray()),
-      // contentType: "application/json; charset=utf-8",
-      // dataType: "json",
-      success: function(data) { debugger },
-      failure: function(errMsg) {
+    $.post("http://secretary-.herokuapp.com/email/",
+      $(this).serializeArray()).done(function(data) {
+        debugger;
+      }).fail(function(errMsg) {
           debugger;
-      }
-    });
+      });
 
     return false;
   });
