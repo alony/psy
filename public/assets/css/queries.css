@@ -45,6 +45,9 @@
 	.hentry {
 		width: 800px;
 	}
+	.placeholder {
+		display: none;
+	}
 }
 
 @media (max-width: 800px) {

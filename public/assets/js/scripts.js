@@ -42,8 +42,8 @@ $(document).ready(function(){
       type: "POST",
       url: "http://secretary-.herokuapp.com/email/",
       data: JSON.stringify($(this).serializeArray()),
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
+      // contentType: "application/json; charset=utf-8",
+      // dataType: "json",
       success: function(data) { debugger },
       failure: function(errMsg) {
           debugger;
