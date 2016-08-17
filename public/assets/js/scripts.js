@@ -38,8 +38,15 @@ $(document).ready(function(){
 
   $('form#contact_form').on('submit', function(e) {
 
+    var data = {};
+    var formData = $(this).serializeArray();
+
+    formData.forEach(function(item, i, formData) {
+      data[item.name] = item.value;
+    }
+
     $.post("http://secretary-.herokuapp.com/email/",
-      $(this).serializeArray()).done(function(data) {
+      data).done(function(a) {
         debugger;
       }).fail(function(errMsg) {
           debugger;
