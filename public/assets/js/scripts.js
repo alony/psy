@@ -43,7 +43,7 @@ $(document).ready(function(){
 
     formData.forEach(function(item, i, formData) {
       data[item.name] = item.value;
-    }
+    });
 
     $.post("http://secretary-.herokuapp.com/email/",
       data).done(function(a) {
