@@ -48,12 +48,12 @@ $(document).ready(function(){
     $.post("http://secretary-.herokuapp.com/email/",
       data).success(function(a) {
         $("form").hide();
-        $(".hint").removeClass("error").html("Danke für Ihr Interesse an einem Termin bzw. weiteren Informationen.\nIch werde mich umgehend mit Ihnen in Verbindung setzen.").show();
+        $(".hint").removeClass("error").html("Ihre Nachricht wurde erfolgreich versandt.").show();
       }).error(function(data) {
         try {
           var errMsg = JSON.parse(data.responseText).error;
         } catch(err) {
-          var errMsg = "Unfortunately the contact form sending failed. We are already notified and working on fixing that, but meanwhile please use phone or email connection, or just try again later. I am sorry for the inconvenience caused."
+          var errMsg = "Aufgrund technischer Probleme ist ein korrekter Versand Ihrer Mail derzeit leider nicht möglich.<br>Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut oder melden sich unter der Rufnummer der Praxis 040 - 181 69 7 22.";
         }
         $(".hint").addClass("error").html(errMsg).show();
       });
