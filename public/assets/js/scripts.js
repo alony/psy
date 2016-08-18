@@ -50,8 +50,11 @@ $(document).ready(function(){
         $("form").hide();
         $(".hint").removeClass("error").html("Danke für Ihr Interesse an einem Termin bzw. weiteren Informationen.\nIch werde mich umgehend mit Ihnen in Verbindung setzen.").show();
       }).error(function(data) {
-        var errMsg = JSON.parse(data.responseText);
-        debugger;
+        try {
+          var errMsg = JSON.parse(data.responseText).error;
+        } catch(err) {
+          var errMsg = "Unfortunately the contact form sending failed. We are already notified and working on fixing that, but meanwhile please use phone or email connection, or just try again later. I am sorry for the inconvenience caused."
+        }
         $(".hint").addClass("error").html(errMsg).show();
       });
 

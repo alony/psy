@@ -676,6 +676,11 @@ form#searchform:after {
   text-align: center;
   display: none;
 }
+.hint.error {
+  border: #B03A2E 1px solid;
+  margin-right: 15px;
+  background-color: rgba(256, 256, 256, 0.15);
+}
 
 input#searchsubmit {
 	 float: right;
