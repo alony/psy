@@ -46,10 +46,10 @@ $(document).ready(function(){
     });
 
     $.post("http://secretary-.herokuapp.com/email/",
-      data).done(function(a) {
+      data).success(function(a) {
         $("form .row input").val("");
         alert("Danke für Ihr Interesse an einem Termin bzw. weiteren Informationen.\nIch werde mich umgehend mit Ihnen in Verbindung setzen.");
-      }).fail(function(errMsg) {
+      }).error(function(errMsg) {
 debugger;
       });
 
