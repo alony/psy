@@ -673,6 +673,7 @@ form#searchform:after {
   color: #FABF8F;
   padding: 10px 20px;
   text-align: center;
+  display: none;
 }
 
 input#searchsubmit {
