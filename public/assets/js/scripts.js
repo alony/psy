@@ -48,10 +48,11 @@ $(document).ready(function(){
     $.post("http://secretary-.herokuapp.com/email/",
       data).success(function(a) {
         $("form").hide();
-        $(".hint").html("Danke für Ihr Interesse an einem Termin bzw. weiteren Informationen.\nIch werde mich umgehend mit Ihnen in Verbindung setzen.").show();
+        $(".hint").removeClass("error").html("Danke für Ihr Interesse an einem Termin bzw. weiteren Informationen.\nIch werde mich umgehend mit Ihnen in Verbindung setzen.").show();
       }).error(function(data) {
         var errMsg = JSON.parse(data.responseText);
-        $(".hint").html(errMsg).show();
+        debugger;
+        $(".hint").addClass("error").html(errMsg).show();
       });
 
     return false;

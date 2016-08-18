@@ -672,6 +672,7 @@ form#searchform:after {
   border: #3C5364 1px solid;
   color: #FABF8F;
   padding: 10px 20px;
+  margin-bottom: 10px;
   text-align: center;
   display: none;
 }
