@@ -47,15 +47,11 @@ $(document).ready(function(){
 
     $.post("http://secretary-.herokuapp.com/email/",
       data).success(function(a) {
-        $("form .row input").val("");
-        $(".hint").val("Danke für Ihr Interesse an einem Termin bzw. weiteren Informationen.\nIch werde mich umgehend mit Ihnen in Verbindung setzen.").show();
-        setTimeout(function() {
-          $('.hint').fadeOut('fast');
-        }, 10000);
+        $("form").hide();
+        $(".hint").html("Danke für Ihr Interesse an einem Termin bzw. weiteren Informationen.\nIch werde mich umgehend mit Ihnen in Verbindung setzen.").show();
       }).error(function(data) {
         var errMsg = JSON.parse(data.responseText);
-        debugger;
-        $(".hint").val("Danke für Ihr Interesse an einem Termin bzw. weiteren Informationen.\nIch werde mich umgehend mit Ihnen in Verbindung setzen.").show();
+        $(".hint").html(errMsg).show();
       });
 
     return false;
