@@ -667,6 +667,12 @@ form#searchform:after {
 	visibility: hidden;
 }
 
+.hint {
+  position: relative;
+  border: #2f7791 1px solid;
+
+}
+
 input#searchsubmit {
 	 float: right;
 	 border: none;
