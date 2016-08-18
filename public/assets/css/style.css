@@ -669,8 +669,10 @@ form#searchform:after {
 
 .hint {
   position: relative;
-  border: #2f7791 1px solid;
-
+  border: #3C5364 1px solid;
+  color: #FABF8F;
+  padding: 10px 20px;
+  text-align: center;
 }
 
 input#searchsubmit {
