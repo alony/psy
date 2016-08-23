@@ -380,6 +380,25 @@ input#submit  {
 	padding-bottom: 5px;
 }
 
+#contact_form .spinner {
+  margin: 30px auto;
+  display: none;
+}
+
+#contact_form.sending #submit_button {
+  display: none;
+}
+
+#contact_form.sending .spinner {
+  display: block;
+}
+
+#contact_form.sending input, #contact_form.sending textarea {
+	background-color: #ccc;
+}
+#contact_form.sending label {
+	color: #ccc;
+}
 
 /* Alignment */
 .alignleft {
@@ -767,9 +786,10 @@ div.hvv span.bus {
 	display: inline-block;
 	background: transparent url('../images/bus.png') left center no-repeat;
 	padding-left: 30px;
+	color: #111 !important;
 }
 div.hvv a {
-  color: #111 important;
+  color: #111 !important;
 }
 /*-----------------------------------------------------------------------------------*/
 /*	MENU

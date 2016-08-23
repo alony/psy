@@ -9,7 +9,7 @@ class App
       "/honorar" => "public/pages/honorar.html",
       "/kontakt" => "public/pages/kontakt.html",
       "/methoden" => "public/pages/methoden.html",
-      "/ueber-mich" => "public/pages/about.html",
+      "/ueber-mich" => "public/pages/ueber-mich.html",
       "/ziel" => "public/pages/ziel.html",
       "/impressum" => "public/pages/impressum.html",
       "/kooperation" => "public/pages/kooperation.html",

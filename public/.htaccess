@@ -1,4 +1,40 @@
-AuthType Basic
-AuthName "Password Protected Area"
-AuthUserFile ./.htpasswd
-Require valid-user
+DirectoryIndex index index.html
+DirectorySlash off
+Options -Indexes -MultiViews
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/index$ [OR]
+RewriteCond %{REQUEST_URI} ^/index[.]+(\w+)$
+  RewriteRule . / [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/slider$
+  RewriteRule . /slider.html [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/ziel$
+  RewriteRule . /ziel.html [R=301,L]
+RewriteCond %{REQUEST_URI} ^/anfahrt$
+  RewriteRule . /anfahrt.html [R=301,L]
+RewriteCond %{REQUEST_URI} ^/impressum$
+  RewriteRule . /impressum.html [R=301,L]
+RewriteCond %{REQUEST_URI} ^/methoden$
+  RewriteRule . /methoden.html [R=301,L]
+RewriteCond %{REQUEST_URI} ^/ueber-mich$
+  RewriteRule . /ueber-mich.html [R=301,L]
+RewriteCond %{REQUEST_URI} ^/ueberbrueckungszeit$
+  RewriteRule . /ueberbrueckungszeit.html [R=301,L]
+RewriteCond %{REQUEST_URI} ^/honorar$
+  RewriteRule . /honorar.html [R=301,L]
+RewriteCond %{REQUEST_URI} ^/kontakt$
+  RewriteRule . /kontakt.html [R=301,L]
+RewriteCond %{REQUEST_URI} ^/kooperation$
+  RewriteRule . /kooperation.html [R=301,L]
+
+
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} (.*)/$
+  RewriteRule . %1.html [R=301,L,E=NS:1,QSA]

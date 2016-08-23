@@ -45,11 +45,16 @@ $(document).ready(function(){
       data[item.name] = item.value;
     });
 
+    $(this).addClass("sending");
+    $("form input[type=text], textarea").prop("disabled", true);
+
     $.post("http://secretary-.herokuapp.com/email/",
       data).success(function(a) {
         $("form").hide();
         $(".hint").removeClass("error").html("Ihre Nachricht wurde erfolgreich versandt.").show();
       }).error(function(data) {
+        $("form input[type=text], textarea").prop("disabled", false);
+        $("form").removeClass("sending");
         try {
           var errMsg = JSON.parse(data.responseText).error;
         } catch(err) {
