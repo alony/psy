@@ -152,6 +152,9 @@
 	iframe#iframe-image-slider {
 		height: 300px;
 	}
+	.honorars .disclaimer {
+		height: 4.5em;
+	}
 }
 @media (max-width: 480px) {
 

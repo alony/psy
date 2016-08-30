@@ -25,7 +25,7 @@ function checkPosition(container) {
 
 //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
 function drags(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
-    dragElement.on("click", function(e) {
+    dragElement.on("mousedown vmousedown", function(e) {
         dragElement.addClass('draggable');
         resizeElement.addClass('resizable');
 
