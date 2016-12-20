@@ -99,12 +99,15 @@ input, textarea {
   margin-top: 30px;
   padding: 10px 20px;
 }
-.methods-list ul li h4 {
+.methods-list ul li span.header {
 	color: #FABF8F;
 	font-size: 26px;
 }
-.methods-list ul li h4:hover {
+.methods-list ul li span.header:hover {
 	cursor: pointer;
+}
+.methods-list ul li span.header small {
+  font-size: smaller;
 }
 .methods-list ul li:before, .methods-list ul li:after {
   content: "";

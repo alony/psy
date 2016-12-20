@@ -16,7 +16,7 @@ jQuery(document).ready(function() {
     }
   });
 
-  jQuery('.methods-list ul li h4').on('click', function(e) {
+  jQuery('.methods-list ul li span.header').on('click', function(e) {
     $(this).parent('li').toggleClass('active');
     $(this).parent('li').find('p').slideToggle();
   });
