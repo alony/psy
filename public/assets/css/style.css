@@ -140,6 +140,19 @@ input, textarea {
 	font-weight: normal;
 }
 
+.honorar-list li p {
+	display: none;
+}
+
+.honorar-list td.header {
+	width: 30px;
+	background: transparent url('../images/corner-right.png') left center no-repeat;
+}
+
+.honorar-list li.active td.header {
+	background: transparent url('../images/corner.png') left center no-repeat;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*	GENERAL
 /*-----------------------------------------------------------------------------------*/
