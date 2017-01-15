@@ -103,7 +103,7 @@ input, textarea {
 	color: #FABF8F;
 	font-size: 26px;
 }
-.methods-list ul li span.header:hover {
+.methods-list ul li:hover {
 	cursor: pointer;
 }
 .methods-list ul li span.header small {
@@ -151,6 +151,15 @@ input, textarea {
 
 .honorar-list li.active td.header {
 	background: transparent url('../images/corner.png') left center no-repeat;
+}
+.honorar-list li {
+	cursor: pointer;
+}
+.honorar-list ul li p.no_bottom_indent {
+	margin-bottom: auto;
+}
+.honorar-list ul li span {
+	color: #FABF8F;
 }
 
 /*-----------------------------------------------------------------------------------*/
